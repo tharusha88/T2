@@ -1,4 +1,5 @@
 import { Coffee, Flame, TreePine } from "lucide-react";
+import { asset } from "../lib/asset.js";
 
 // Everything here is site content: edit text, prices and photos in this file.
 
@@ -11,14 +12,14 @@ export const contact = {
 };
 
 export const images = {
-  hero: "/images/highlands.webp",
-  estate: "/images/estate.webp",
-  cabana: "/images/cabana.webp",
-  villa: "/images/villa.webp",
-  mud: "/images/mud-house.webp",
-  timber: "/images/timber.webp",
-  balcony: "/images/balcony.webp",
-  fire: "/images/campfire.webp",
+  hero: asset("images/highlands.webp"),
+  estate: asset("images/estate.webp"),
+  cabana: asset("images/cabana.webp"),
+  villa: asset("images/villa.webp"),
+  mud: asset("images/mud-house.webp"),
+  timber: asset("images/timber.webp"),
+  balcony: asset("images/balcony.webp"),
+  fire: asset("images/campfire.webp"),
 };
 
 export const navLinks = [

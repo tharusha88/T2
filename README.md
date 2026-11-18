@@ -24,6 +24,23 @@ npm run preview   # serve the production build
 | All styling | `src/styles.css` |
 | Photos, fonts, film, favicon | `public/` |
 
+## Deploying (GitHub Pages)
+
+Every push to `main` builds the site and publishes it to
+**https://tharusha88.github.io/T2/** (`.github/workflows/deploy-pages.yml`).
+You can also run it by hand from the repo's **Actions** tab → *Deploy to GitHub Pages* → *Run workflow*.
+
+One-time setup: repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+The site is served from the `/T2/` sub-folder (the repo name), so files in `public/` must be referenced
+through `asset("images/…")` (`src/lib/asset.js`) in JavaScript. CSS `url(/…)` and `index.html` paths
+are rewritten by Vite automatically. To test that build locally:
+
+```
+$env:BASE_PATH = "/T2/"; npm run build; Remove-Item Env:BASE_PATH
+npx vite preview --base /T2/    # http://localhost:4173/T2/
+```
+
 ## How enquiries work
 
 There is no backend. "Plan your escape", "Enquire about a stay" and the other booking buttons open
